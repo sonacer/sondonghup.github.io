@@ -1,7 +1,7 @@
 ---
 # multilingual page pair id, this must pair with translations of this page. (This name must be unique)
 lng_pair: id_Examples
-title: 
+title: 오류역전파
 
 # post specific
 # if not specified, .name will be used from _data/owner/[language].yml
@@ -43,7 +43,7 @@ This is an example page to display markdown related styles for Mr. Green Jekyll 
 
 <!-- outline-end -->
 
-### Headings (centered)
+### 오류 역전파
 {:data-align="center"}
 
 # Heading 1
