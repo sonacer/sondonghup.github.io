@@ -54,6 +54,8 @@ Rnn은 Recurrent neural network의 줄임말로 순환 신경망이라 한다.
   
 ### Rnn 식
 ![image](https://user-images.githubusercontent.com/42092560/184859664-f0c4a3da-9b39-48a7-92dd-4ae93ba804ca.png)
+  
+![image](https://user-images.githubusercontent.com/42092560/184860250-5f0d3341-6e0e-419f-8cf9-65902afbd158.png)
 
   
 
