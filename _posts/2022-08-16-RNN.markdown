@@ -48,6 +48,15 @@ This is an example page to display markdown related styles for Mr. Green Jekyll 
 word2vec의 CBOW모델이 있다. 이 모델을 언어 모델로 사용하게 되면 어떻게 될까?  
   
 문맥고려 문제와 순서고려 문제가 있다. 이럴때 사용하는 것이 Rnn 이다.  
+
+Rnn은 Recurrent neural network의 줄임말로 순환 신경망이라 한다.  
+  
+  
+### Rnn 식
+![image](https://user-images.githubusercontent.com/42092560/184859664-f0c4a3da-9b39-48a7-92dd-4ae93ba804ca.png)
+
+  
+
 # Heading 1
 
 ## Heading 2
