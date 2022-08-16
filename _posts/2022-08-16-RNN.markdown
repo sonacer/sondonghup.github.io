@@ -45,8 +45,8 @@ This is an example page to display markdown related styles for Mr. Green Jekyll 
 
 ### Rnn
 {:data-align="center"}
-
-
+#
+#
 word2vec의 CBOW모델이 있다. 이 모델을 언어 모델로 사용하게 되면 어떻게 될까?
 # Heading 1
 
