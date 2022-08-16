@@ -88,5 +88,23 @@ seq2seq는 encoder-decoder 모델이라고도 한다.
   
 padding은 입력길이를 같게 하기 위해 뒤에 의미없는 값을 넣어 주는 것을 말한다.  
 ex)  
-![image](https://user-images.githubusercontent.com/42092560/184928557-6c00c20e-e0a7-47d4-bf39-3d835564c5dc.png)
+![image](https://user-images.githubusercontent.com/42092560/184928557-6c00c20e-e0a7-47d4-bf39-3d835564c5dc.png)  
+  
+위와 같이 가장 긴 길이의 문장에 맞춰 0 값을 넣어준다.  
+  
+이때 seq2seq에서 의미없는 값도 처리하기 때문에 다음 처리를 해준다.  
+  
+● decoder에서 나온 출력값은 0이 포함된 입력의 값이기 때문에 mask 처리를 해준다.  
+  
+mask는 1,0으로 이루어진 벡터로 위의 사진 같은 경우  
+  
+![image](https://user-images.githubusercontent.com/42092560/184930461-ce5b2211-cbab-4990-b24e-b5f521104642.png)
+  
+이 값을 곱해준다 이렇게 되면 기존에 0인 곳은 0을 곱해 0으로 만들어 버리고  
+  
+유의미한 부분의 값만 남게 된다.  
+  
+● encoder에서 입력값이 0 (padding)이면 이전의 히든계층을 넘기는 방식으로 처리한다.  
+  
+### seq2seq 개선
 
