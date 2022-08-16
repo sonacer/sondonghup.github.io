@@ -67,7 +67,24 @@ ex) 나는 동협이다. -> 나 / 는 / 동협 / 이다 -> '나'를 벡터화 �
 ![image](https://user-images.githubusercontent.com/42092560/184865381-7eb3f216-3190-4bcb-bf18-44e664da26ce.png)는 sigmoid도 사용가능하다 tanh가 기울기가 커서 수렴이 더 빠르다  
   
 ### Rnn  
-![image](https://user-images.githubusercontent.com/42092560/184868498-78d56b7e-ee24-4b7c-97d2-75c404587454.png)
+![image](https://user-images.githubusercontent.com/42092560/184868778-ff33051b-9133-48d0-b252-baca65ee8bc8.png)
+
+![image](https://user-images.githubusercontent.com/42092560/184869250-10261f37-fc24-49f3-8d4a-bdfe2d36d518.png)
+  
+  
+순전파와 역전파의 그림이다.
+
+나는 동협이다를 예로 순서를 알아보자.  
+처음 x에는 '나'를 벡터화한 값이 들어간다. hprev는 처음이라 영벡터가 들어간다. 위의 그림에 따라 내적도 하고 tanh도 취해서 hnext값이 나온다 (벡터값)  
+그러면 이제 이 hnext값이 다시 hprev값으로 들어가며 x에는 '나'다음인 '는'의 벡터화 된값이 들어가며 반복이된다.  
+앞에서 말했듯 rnn은 한개의 구조에 순환하는 방식이다. 나는 펼쳐진 그림을 봐서 여러개라 생각했었다...  
+  
+이제 역전파를 한번 생각해보자 위의 예시처럼 나는 동협이다를 기준으로 하면 4번 역전파를 하면 된다.  
+그런데 엄청 긴 문장이라면 어떨까 역전파를 계속 하면서 0에서 1사이의 값이 계속 곱해져 점점 작아진다.  
+이렇게 되면 손실이 잃어나게 되어 가중치가 업데이트가 원활하게 업데이트 되지 않을 것이다.  
+  
+  
+![image](https://user-images.githubusercontent.com/42092560/184878031-8606e1f7-8c6c-4dd1-af3c-181619f91f8a.png)
 
 
 
