@@ -61,9 +61,14 @@ Rnn은 Recurrent neural network의 줄임말로 순환 신경망이라 한다.
 
 ![image](https://user-images.githubusercontent.com/42092560/184861343-8f54af0c-90fa-43e4-95aa-2e3ddb5164fd.png) : 단어 벡터  
 ex) 나는 동협이다. -> 나 / 는 / 동협 / 이다 -> '나'를 벡터화 한 것 (그다음에는 '는'을 벡터화 한 것이 들어갈것 )  
+  
 ![image](https://user-images.githubusercontent.com/42092560/184865256-dcb171c7-5393-4bdb-8441-b1be6fab4105.png) : 가중치 
 
-![image](https://user-images.githubusercontent.com/42092560/184865381-7eb3f216-3190-4bcb-bf18-44e664da26ce.png)는 
+![image](https://user-images.githubusercontent.com/42092560/184865381-7eb3f216-3190-4bcb-bf18-44e664da26ce.png)는 sigmoid도 사용가능하다 tanh가 기울기가 커서 수렴이 더 빠르다  
+  
+### Rnn  
+![image](https://user-images.githubusercontent.com/42092560/184868498-78d56b7e-ee24-4b7c-97d2-75c404587454.png)
+
 
 
 
