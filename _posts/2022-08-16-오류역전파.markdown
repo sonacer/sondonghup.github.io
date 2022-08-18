@@ -45,145 +45,42 @@ This is an example page to display markdown related styles for Mr. Green Jekyll 
 
 ### 오류 역전파
 {:data-align="center"}
+  
+오류 역전파는 오차가 본래 진행방향과 반대 방향으로 전파 되는것을 의미한다.  
+  
+1. 초기 weight가 정해진다.  
+  
+2. 훈련 데이터 중에서 무작위로 데이터를 골라낸다. (미니 배치)  
+  
+3. 오류 역전파를 이용하여 각 가중치 매개변수에 대한 손실 함수의 기울기를 구한다.  
+  
+4. 기울기를 사용하여 가중치 매개변수를 갱신한다.  
+  
+5. 반복한다.
 
-# Heading 1
+![image](https://user-images.githubusercontent.com/42092560/185377306-14bac902-4dfa-4209-bb69-9ce57f898b31.png)  
+  
+![image](https://user-images.githubusercontent.com/42092560/185377432-32d7d143-2719-42c0-8c5f-202a08b31cc7.png) : 가중치 매개변수  
+  
+![image](https://user-images.githubusercontent.com/42092560/185377529-3e7ec319-7fa2-40a5-9183-6c50764c082f.png) : 기울기  
+  
+![image](https://user-images.githubusercontent.com/42092560/185377582-6fce4b46-a502-4db9-8191-34e3829ac063.png) : 학습률  
+  
+보통 학습률은 발걸음처럼 묘사가 되는데 확확 변하면 빠르게 최소 loss를 찾을 수 있지만 오히려 밖으로 빠져나올 위험도 있다.  
+  
+그렇다고 너무 작으면 loss를 찾는데 오래 걸리고 또 이상한 loss값에 빠질수도 있다.  
+  
+그러므로 적당한 학습률을 찾는것이 중요하다.  
+  
+옵티마이저는 이러한 과정을 더 잘하도록 도와주는 친구라고 생각하면 된다.
+  
+위에서 나온 미니 배치는 우리가 흔히 쓰는 batch_size이다.  
+  
+미니 배치가 크면 데이터를 많이씩 보는 것을 뜻한다. 그러면 일반화가 잘된다.  
+  
+즉 규칙을 잘 찾아낸다.  
+  
+미니 배치가 작으면 조금씩 보니까 데이터 중에서 특이한 데이터에 집중이될 학률이 높아진다.  
+  
 
-## Heading 2
 
-### Heading 3
-
-#### Heading 4
-
-##### Heading 5
-
-###### Heading 6
-
-***
-
-### Paragraphs
-
-#### Paragraph
-
-**William Shakespeare**, Let me not to the marriage of true minds
-Admit impediments. Love is not love
-Which alters when it alteration finds,
-Or bends with the remover to remove.
-O no, it is an ever-fixed mark
-That looks on tempests and is never shaken;
-It is the star to every wand'ring barque,
-Whose worth's unknown, although his height be taken.
-Love's not Time's fool, though rosy lips and cheeks
-Within his bending sickle's compass come;
-Love alters not with his brief hours and weeks,
-But bears it out even to the edge of doom.
-If this be error and upon me proved,
-I never writ, nor no man ever loved.
-
-#### Texts
-
-Quoted text `Hello world`
-
-Bold text **Hello world**
-
-Italic text _Hello world_
-
-kbd text <kbd>Hello world</kbd>
-
-#### Blockquote
-
-> **William Shakespeare**, Let me not to the marriage of true minds
-> Admit impediments. Love is not love
-> Which alters when it alteration finds,
-> Or bends with the remover to remove.
-> O no, it is an ever-fixed mark
-> That looks on tempests and is never shaken;
-> It is the star to every wand'ring barque,
-> Whose worth's unknown, although his height be taken.
-> Love's not Time's fool, though rosy lips and cheeks
-> Within his bending sickle's compass come;
-> Love alters not with his brief hours and weeks,
-> But bears it out even to the edge of doom.
-> If this be error and upon me proved,
-> I never writ, nor no man ever loved.
-
-### Link
-
-This is [Mr. Green Jekyll Theme](https://github.com/MrGreensWorkshop/MrGreen-JekyllTheme), a simple theme built for [Jekyll](https://jekyllrb.com/).
-
-\* Hello world! This is **[{{ site.data.owner[site.data.conf.main.default_lng].brand }}]({{ site.url }})**
-
-### Picture
-
-![such a lovely place](:post_pic1.jpg)
-
-### Picture (centered)
-
-![such a lovely place](:post_pic1.jpg){:data-align="center"}
-
-### Lists
-
-- Apple
-- Banana
-- Orange
-
-1. Fruits
-   1. Apples
-      - Granny Smith
-      - Mutsu
-   1. Bananas
-      - Cavendish
-      - Red
-1. Vegetables
-
-***
-
-### Tables
-
-#### Small Table (centered)
-
-| Fruits(not aligned) | Alignment (centered) | num (right align) |
-| ------------------- | :------------------: | ----------------: |
-| Apple               |       centered       |              9999 |
-| Banana              |  centered long text  |               999 |
-| Orange              |       centered       |                99 |
-| Lemon               |       centered       |                 9 |
-{:data-align="center"}
-
-#### Wide Table (centered)
-
-scroll enabled when page is narrow
-
-| Fruits | num (left align) | num (right align) | num  | num  | num  |
-| ------ | :--------------- | ----------------: | ---- | ---- | ---- |
-| Apple  | 1111             |              1111 | 2222 | 3333 | 4444 |
-| Banana | 111              |               111 | 222  | 333  | 444  |
-| Orange | 11               |                11 | 22   | 33   | 44   |
-| Lemon  | 1                |                 1 | 2    | 3    | 4    |
-{:data-align="center"}
-
-#### Wider Table
-
-scroll enabled when page is narrow
-
-| Fruits | num (left align) | num (right align) | num  | num  | num  | num  | num  | num  |
-| ------ | :--------------- | ----------------: | ---- | ---- | ---- | ---- | ---- | ---- |
-| Apple  | 1111             |              1111 | 2222 | 3333 | 4444 | 5555 | 6666 | 7777 |
-| Banana | 111              |               111 | 222  | 333  | 444  | 555  | 666  | 777  |
-| Orange | 11               |                11 | 22   | 33   | 44   | 55   | 66   | 77   |
-| Lemon  | 1                |                 1 | 2    | 3    | 4    | 5    | 6    | 7    |
-
-### Code
-
-#### Highlight
-
-{% highlight python %}
-for i in range(5, 10):
-  print(i)
-{% endhighlight %}
-
-#### Quote
-
-```python
-for i in range(5, 10):
-  print(i)
-```
