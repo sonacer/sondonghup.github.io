@@ -101,5 +101,21 @@ ex) 나는 동협이다. -> 나 / 는 / 동협 / 이다 -> '나'를 벡터화 �
 affine (= linear layer ) : 차원을 맞춰주는 레이어다.  
 ex) 만약 10개 카테고리를 분류 한다고 생각하면 affine에서 10개의 차원으로 맞춰줘야 할것이다.
   
-
-
+  
+### rnn 구현  
+  
+```python
+class Rnn:
+    def __init__(self, wx, wh, b):
+        self.params = [wx, wh, b]
+        self.grads = [np.zeros_like(wx),np.zeros_like(wh),np.zeros_like(b)]
+    
+    def forward(self, x, h_pre):
+        wx, wh, b = self.params
+        t = np.matmul(x, wx) + np.matmul(wh, h_pre) + b
+        h_next = np.tanh(t)
+        
+        return h_next
+```  
+  
+pytorch에서 forward만 작성을 해주면 loss.backward()를 통해 역전파도 제공을 한다.
