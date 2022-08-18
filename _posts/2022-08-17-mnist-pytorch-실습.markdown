@@ -195,5 +195,8 @@ for epoch in range(n_epochs):
     print(f"loss is {100 * loss:.4f}")
 ```  
   
-epoch 마다 acc와 loss를 계산한다.
+epoch 마다 acc와 loss를 계산한다.  
+  
+![image](https://user-images.githubusercontent.com/42092560/185372980-1d77cd23-55d9-445f-8937-716125e2c687.png)
+
 
