@@ -197,6 +197,6 @@ for epoch in range(n_epochs):
   
 epoch 마다 acc와 loss를 계산한다.  
   
-![image](https://user-images.githubusercontent.com/42092560/185372980-1d77cd23-55d9-445f-8937-716125e2c687.png)
+![image](https://user-images.githubusercontent.com/42092560/185373930-b06c0546-c62f-4959-bafa-382219ef870f.png)
 
 
